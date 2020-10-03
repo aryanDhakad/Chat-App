@@ -1,0 +1,27 @@
+<%- include('partials/header') %>
+
+<h1>Hi people!</h1>
+
+<div class="table-responsive-xl">
+  <table class="table table-striped">
+    <thead class="thead-dark">
+      <th>Person .</th>
+      <th>Message</th>
+    </thead>
+
+    <tbody>
+      <%for(var i=0; i<(orders).length ;i++){%>
+      <tr>
+
+        <td> <%=orders[i].name.substring(0,45)%>
+        </td>
+        <td> <%=truncate(orders[i].message,50)%>
+        </td>
+      </tr>
+      <%}%>
+      </tbody>
+  </table>
+</div>
+
+
+<%- include('partials/footer') %>

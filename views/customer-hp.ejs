@@ -1,0 +1,64 @@
+<%- include('partials/header') %>
+
+
+
+
+<div class="bgaimate">
+  <h1>Welcome , <%= customerName %> </h1>
+  <br>
+  <div class="row">
+    <div class="col-lg-6">
+      <h1>Your Messages, <%= customerName %></h1>
+
+
+      <form class="" action="/orderList" method="post">
+        <button value="<%= customerName %>" type="submit" name="Orders" class="btn btn-success btn-lg orderbtn"
+          href="/list">Common Chat </button>
+      </form>
+      <div class="table-responsive-xl table-wrapper-scroll-y my-custom-scrollbar">
+        <table class="table table-striped">
+          <thead class="thead-dark ">
+            <th>Message</th>
+            <th>Receivers</th>
+          </thead>
+
+          <tbody>
+            <%for(var i=0; i<(sent).length ;i++){%>
+            <tr>
+
+              <td> <%=sent[i].message%>
+              </td>
+              <td> <%=sent[i].sentTo%>
+              </td>
+            </tr>
+            <%}%>
+            </tbody>
+        </table>
+      </div>
+
+    </div>
+    <div class="col-lg-6 ">
+      <h1>Write Something New</h1> 
+
+            <form class="" action="/order" method="post">
+              <input type="text" name="orderInput">
+              <br>
+              <button type="submit" name="orderBtn" value=<%=customerName %> class="btn btn-primary orderbtn"> Send to
+            All
+            </button>
+            </form>
+            <form action="/private" method="post">
+              <button value="<%= customerName %>" type="submit" name="private" class="btn btn-danger btn-lg orderbtn"
+                href="/list">Private Chat</button>
+            </form>
+
+
+
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <%- include('partials/footer') %>

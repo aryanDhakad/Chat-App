@@ -1,0 +1,38 @@
+<%- include('partials/header') %>
+
+
+<div class="privatebg">
+
+    <h1>User: <%= name %> </h1>
+    <div>
+        <% for(var i = 0; i <list.length;i++){%>
+
+        <label for="<%=  list[i].name %>"><%=  list[i].name %> : </label>
+        <input value="<%=  list[i].name %>" type="checkbox" name="li">
+        <br>
+
+        <%}%>
+</div>
+
+<form class="" action="/wish" method="post">
+    <input type="text" name="orderInput">
+    <input type="hidden" name="list" value="">
+    <br>
+    <button type="submit" name="orderBtn" value="<%= name %>" class="btn btn-primary orderbtn"
+        onclick="check()">
+        Send </button>
+        </form>
+
+        <form class="" action="/wishList" method="post">
+            <button value="<%= name %>" type="submit" name="Orders" class="btn btn-primary btn-lg orderbtn"
+                href="/list">View
+                Private Messages</button>
+        </form>
+
+
+
+
+
+
+    </div>
+    <%- include('partials/footer') %>

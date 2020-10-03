@@ -1,0 +1,31 @@
+<%- include('partials/header') %>
+
+<div class="jumbotron">
+  <h1 class="display-4"> Please Log In here </h1>
+</div>
+<div class="">
+  <form action="/login" method="post">
+    <div class="form-group">
+      <div class="form-group">
+        <label for="username">Username : </label>
+
+        <input type="text" name="username" value="">
+      </div>
+      <br>
+      <div class="form-group">
+        <label for="password">Password : </label>
+
+        <input type="text" name="password" value="">
+      </div>
+      <br>
+      <br>
+      <br>
+      <button type="submit" class="btn btn-primary"> Login </button>
+  </form>
+
+
+</div>
+
+
+
+<%- include('partials/footer') %>

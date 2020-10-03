@@ -1,0 +1,28 @@
+<%- include('partials/header') %>
+
+<h1>Hi people!</h1>
+
+
+<div class="table-responsive-xl">
+  <table class="table table-striped">
+    <thead class="thead-dark">
+      <th>Person .</th>
+      <th>Message Secret</th>
+    </thead>
+
+    <tbody>
+      <%for(var i=0; i<(orders).length ;i++){%>
+      <tr>
+
+        <td> <%=orders[i].name%>
+        </td>
+        <td> <%=orders[i].message%>
+        </td>
+      </tr>
+      <%}%>
+      </tbody>
+  </table>
+</div>
+
+
+<%- include('partials/footer') %>

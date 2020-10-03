@@ -1,0 +1,30 @@
+<%- include('partials/header') %>
+
+<div class="jumbotron">
+    <h1 class="display-4"> Please Register here </h1>
+</div>
+<div class="">
+    <form action="/register" method="post">
+        <div class="form-group">
+            <label for="username">Username : </label>
+
+            <input type="text" name="username" value="" placeholder="Jack Bauer">
+        </div>
+        <br>
+        <div class="form-group">
+            <label for="password">Password : </label>
+
+            <input type="text" name="password" value="">
+        </div>
+        <br>
+        <br>
+        <br>
+        <button type="submit" class="btn btn-primary"> Register </button>
+    </form>
+
+
+</div>
+
+
+
+<%- include('partials/footer') %>
